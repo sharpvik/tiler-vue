@@ -1,26 +1,48 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <main id="main">
+    <div class="main-col"><Ava /></div>
+    <div class="main-col">Menu</div>
+    <div class="main-col">Menu</div>
+    <div class="main-col">Menu</div>
+  </main>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Ava from "./components/Ava";
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    Ava,
+  },
+};
 </script>
 
 <style>
-#app {
+* {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+#main {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.main-col {
+  width: 230px;
+  height: calc(100% - 20px);
+}
+
+.tile {
+  background-color: #282a36;
+  border-radius: 10px;
+  overflow: hidden;
 }
 </style>
