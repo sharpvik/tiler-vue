@@ -1,18 +1,21 @@
 <template>
   <main id="main">
-    <div class="main-col"><Ava /></div>
-    <div class="main-col">Menu</div>
-    <div class="main-col">Menu</div>
-    <div class="main-col">Menu</div>
+    <div class="main-col" width="230px"><Ava /></div>
+    <div class="main-col" width="230px">Menu</div>
+    <div class="main-col" width="230px">Menu</div>
+    <div class="main-col" width="60px"><Corner /></div>
   </main>
 </template>
 
 <script>
 import Ava from "./components/Ava";
+import Corner from "./components/Corner";
+
 export default {
   name: "App",
   components: {
     Ava,
+    Corner,
   },
 };
 </script>
@@ -36,7 +39,6 @@ export default {
 }
 
 .main-col {
-  width: 230px;
   height: calc(100% - 20px);
 }
 
