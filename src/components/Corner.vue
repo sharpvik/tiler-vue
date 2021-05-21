@@ -1,5 +1,5 @@
 <template>
-  <button>
+  <button @click="close">
     <p><span class="material-icons"> close </span></p>
   </button>
 </template>
@@ -9,6 +9,12 @@ import "../../node_modules/material-design-icons/iconfont/material-icons.css";
 
 export default {
   name: "Corner",
+  methods: {
+    close() {
+      console.log(window.electron);
+      window.electron.ipcRenderer.send("quit");
+    },
+  },
 };
 </script>
 
